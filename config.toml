@@ -51,6 +51,7 @@ uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 patches-version = "v5.7.2"
 included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'SIM spoof'"
 exclusive-patches = true
+patcher-args = "-OnetworkCountryIso=VN -OsimCountryIso=VN "
 
 [Twitch]
 enabled = true
