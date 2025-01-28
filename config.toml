@@ -56,9 +56,9 @@ patcher-args = "-OnetworkCountryIso=VN -OsimCountryIso=VN "
 [Twitch]
 enabled = true
 build-mode = "apk"
-version = "auto"
+version = "16.9.1"
 arch = "all"
-apkmirror-dpi = "120-640dpi"
+apkmirror-dpi = "nodpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 included-patches = "'Block audio ads' 'Block embedded ads' 'Block video ads' 'Show deleted messages' 'Auto claim channel points' 'Settings'"
