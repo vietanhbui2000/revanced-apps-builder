@@ -60,9 +60,9 @@ exclusive-patches = true
 [Twitch]
 enabled = true
 build-mode = "apk"
-version = "16.9.1"
+version = "auto"
 arch = "all"
-apkmirror-dpi = "nodpi"
+apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch"
 # uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 # cli-version = "latest"
