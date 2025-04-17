@@ -1,3 +1,4 @@
+Spotify: 9.0.36.683  
 Twitch: 24.0.0  
 YouTube: 20.07.39  
 YouTube-Music (arm64-v8a): 8.05.51  
