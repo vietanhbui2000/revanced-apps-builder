@@ -316,7 +316,35 @@ dl_apkmirror() {
 		local resp node app_table uurl dlurl=""
 		uurl=$(grep -F "downloadLink" <<<"$__APKMIRROR_RESP__" | grep -F "${version//./-}-release/" | head -1 |
 			sed -n 's;.*href="\(.*-release\).*;\1;p')
-		if [ -z "$uurl" ]; then url="${url}/${url##*/}-${version//./-}-release/"; else url=https://www.apkmirror.com$uurl; fi
+		if [ -z "$uurl" ]; then 
+			# Try both URL variations (with and without hyphen in the app name)
+			local app_path=${url##*/}
+			local url_alt=${url%/*}
+			# Try the original URL format
+			local test_url="${url}/${app_path}-${version//./-}-release/"
+			resp=$(req "$test_url" - 2>/dev/null)
+			if [ -z "$resp" ] || ! grep -q "APK Download" <<<"$resp"; then
+				# If failed, try the alternate format by replacing "tik-tok" with "tiktok"
+				if [[ "$app_path" == "tik-tok" ]]; then
+					test_url="${url_alt}/tiktok/tiktok-${version//./-}-release/"
+				elif [[ "$app_path" == "tiktok" ]]; then
+					test_url="${url_alt}/tik-tok/tik-tok-${version//./-}-release/"
+				else
+					# For other variations, try removing hyphen
+					test_url="${url_alt}/${app_path//-/}/${app_path//-/}-${version//./-}-release/"
+				fi
+				resp=$(req "$test_url" - 2>/dev/null)
+				if [ -n "$resp" ] && grep -q "APK Download" <<<"$resp"; then
+					url="$test_url"
+				else
+					url="${url}/${app_path}-${version//./-}-release/"
+				fi
+			else
+				url="$test_url"
+			fi
+		else 
+			url=https://www.apkmirror.com$uurl
+		fi
 		resp=$(req "$url" -) || return 1
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ "$node" ]; then
