@@ -316,8 +316,21 @@ dl_apkmirror() {
 		local resp node app_table uurl dlurl=""
 		uurl=$(grep -F "downloadLink" <<<"$__APKMIRROR_UPLOADS__" | grep -F "${version//./-}-release/" |
 			sed -n 's;.*href="\(.*-release\).*;\1;p')
-		if [ -z "$uurl" ]; then url="${url}/${url##*/}-${version//./-}-release/"; else url=https://www.apkmirror.com$uurl; fi
+			if [ -z "$uurl" ]; then 
+		local app_name="${url##*/}"
+		# Try the original app name first
+		url="${url}/${app_name}-${version//./-}-release/"
+		resp=$(req "$url" -)
+		# If that fails, try without hyphens in app name (e.g., "tik-tok" -> "tiktok")
+		if [ $? -ne 0 ]; then
+			local app_name_no_hyphens="${app_name//-/}"
+			url="${url%/*}/${app_name_no_hyphens}-${version//./-}-release/"
+			resp=$(req "$url" -) || return 1
+		fi
+	else 
+		url=https://www.apkmirror.com$uurl
 		resp=$(req "$url" -) || return 1
+	fi
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ "$node" ]; then
 			if ! dlurl=$(apk_mirror_search "$resp" "$dpi" "${arch}" "APK"); then
