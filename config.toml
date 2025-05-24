@@ -6,6 +6,7 @@ integrations-source = "revanced/revanced-integrations"
 
 cli-version = "latest"
 patches-version = "latest"
+integrations-version = "latest"
 
 [TikTok]
 enabled = true
