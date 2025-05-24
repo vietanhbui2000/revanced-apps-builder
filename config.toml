@@ -6,6 +6,7 @@ integrations-source = "revanced/revanced-integrations"
 
 cli-version = "latest"
 patches-version = "latest"
+integrations-version = "latest"
 
 [YouTube]
 enabled = true
@@ -32,30 +33,6 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback' 'GmsCore support' 'Hide 'Get Music Premium' label' 'Hide music video ads' 'Remove background playback restrictions' 'Remove upgrade button' 'Spoof client'"
 excluded-patches = "'Hide category bar' 'Permanent repeat'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced "
-
-[TikTok]
-enabled = true
-# cli-version = "latest"
-# patches-version = "v5.7.2"
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok/"
-# uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
-included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'SIM spoof'"
-exclusive-patches = true
-
-[TikTok-Musically]
-enabled = false
-# cli-version = "latest"
-# patches-version = "v5.7.2"
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-# uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'SIM spoof'"
-exclusive-patches = true
 
 [Twitch]
 enabled = true
