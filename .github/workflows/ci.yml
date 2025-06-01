@@ -2,7 +2,12 @@ name: CI
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 20 * * *" # Runs at 03:00 (UTC+7).
+  push:
+    branches:
+      - main
+    paths:
+      - 'config.toml'
 
 jobs:
   check:
