@@ -14,7 +14,7 @@ build-mode = "apk"
 version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-# uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 included-patches = "'Bypass image region restrictions' 'Bypass URL redirects' 'Change form factor' 'Change start page' 'Disable auto captions' 'Disable fullscreen ambient mode' 'Disable haptic feedback' 'Disable HDR video' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide Shorts components' 'Hide timestamp' 'Hide video action buttons' 'Miniplayer' 'Navigation buttons' 'Open links externally' 'Remove background playback restrictions' 'Remove player controls background' 'Remove tracking query parameter' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Seekbar' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Video ads' 'Video quality'"
 excluded-patches = "'Alternative thumbnails' 'Always repeat' 'Announcements' 'Change header' 'Check watch history domain name resolution' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Exit fullscreen mode' 'Open Shorts in regular player' 'Open videos fullscreen' 'Playback speed' 'Shorts autoplay' 'Swipe controls' 'Theme' 'Wide search bar'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced "
@@ -25,7 +25,7 @@ build-mode = "apk"
 version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
-# uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback' 'GmsCore support' 'Hide 'Get Music Premium' label' 'Hide music video ads' 'Remove background playback restrictions' 'Remove upgrade button' 'Spoof client'"
 excluded-patches = "'Hide category bar' 'Permanent repeat'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced "
@@ -37,7 +37,7 @@ version = "auto"
 arch = "all"
 apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch/"
-# uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 included-patches = "'Block audio ads' 'Block embedded ads' 'Block video ads' 'Show deleted messages' 'Auto claim channel points' 'Settings'"
 exclusive-patches = true
 
@@ -47,7 +47,7 @@ build-mode = "apk"
 version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitter-inc/twitter/"
-# uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
 
 [Reddit]
 enabled = false
@@ -55,7 +55,7 @@ build-mode = "apk"
 version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
-# uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 
 [Google-Photos]
 enabled = false
@@ -63,7 +63,7 @@ build-mode = "apk"
 version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos/"
-# uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 [Backdrops]
 enabled = true
@@ -72,6 +72,7 @@ version = "auto"
 arch = "all"
 apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/backdrops/backdrops-wallpapers/"
+uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
 included-patches = "'Pro unlock'"
 exclusive-patches = true
 
@@ -81,5 +82,6 @@ build-mode = "apk"
 version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email/"
+uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 included-patches = "'Remove free accounts limit' 'Remove 'Sent from' signature'"
 exclusive-patches = true
