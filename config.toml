@@ -62,5 +62,24 @@ enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos/"
 # uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
+
+[Backdrops]
+enabled = true
+build-mode = "apk"
+version = "auto"
+arch = "all"
+apkmirror-dpi = "120-640dpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/backdrops/backdrops-wallpapers/"
+included-patches = "'Pro unlock'"
+exclusive-patches = true
+
+[Proton-Mail]
+enabled = true
+build-mode = "apk"
+version = "auto"
+arch = "all"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email/"
+included-patches = "'Remove free accounts limit' 'Remove 'Sent from' signature'"
+exclusive-patches = true
