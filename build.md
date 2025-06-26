@@ -1,7 +1,7 @@
 Backdrops: 5.2  
-Proton-Mail: 4.11.0  
-Twitch: 24.9.0  
-YouTube: 20.12.46  
+Proton-Mail: 4.12.1  
+Twitch: 25.0.1  
+YouTube: 20.13.41  
 YouTube-Music (arm64-v8a): 8.05.51  
 YouTube-Music (arm-v7a): 8.05.51  
 
@@ -11,5 +11,5 @@ Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanc
 [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
   
 CLI: revanced/revanced-cli-5.0.1-all.jar  
-Patches: revanced/patches-5.28.0.rvp  
-[Changelog](https://github.com/revanced/revanced-patches/releases/tag/v5.28.0)  
+Patches: revanced/patches-5.29.0.rvp  
+[Changelog](https://github.com/revanced/revanced-patches/releases/tag/v5.29.0)  
