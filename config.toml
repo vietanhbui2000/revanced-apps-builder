@@ -30,26 +30,6 @@ included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback
 excluded-patches = "'Hide category bar' 'Permanent repeat'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced "
 
-[TikTok]
-enabled = true
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok/"
-uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
-included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'SIM spoof'"
-exclusive-patches = true
-
-[TikTok-Musically]
-enabled = false
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'SIM spoof'"
-exclusive-patches = true
-
 [Twitch]
 enabled = true
 build-mode = "apk"
