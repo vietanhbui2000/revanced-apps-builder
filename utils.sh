@@ -313,11 +313,25 @@ dl_apkmirror() {
 		is_bundle=true
 	else
 		if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
-		local resp node app_table apkmname dlurl=""
-		apkmname=$($HTMLQ "h1.marginZero" --text <<<"$__APKMIRROR_RESP__")
-		apkmname="${apkmname,,}" apkmname="${apkmname// /-}" apkmname="${apkmname//[^a-z0-9-]/}"
-		url="${url}/${apkmname}-${version//./-}-release/"
+		local resp node app_table uurl dlurl=""
+		uurl=$(grep -F "downloadLink" <<<"$__APKMIRROR_UPLOADS__" | grep -F "${version//./-}-release/" |
+			sed -n 's;.*href="\(.*-release\).*;\1;p')
+			if [ -z "$uurl" ]; then 
+		local base_url="$url"
+		local app_name="${url##*/}"
+		# Try the original app name first
+		url="${base_url}/${app_name}-${version//./-}-release/"
+		resp=$(req "$url" -)
+		# If that fails, try without hyphens in app name (e.g., "tik-tok" -> "tiktok")
+		if [ $? -ne 0 ]; then
+			local app_name_no_hyphens="${app_name//-/}"
+			url="${base_url}/${app_name_no_hyphens}-${version//./-}-release/"
+			resp=$(req "$url" -) || return 1
+		fi
+	else 
+		url=https://www.apkmirror.com$uurl
 		resp=$(req "$url" -) || return 1
+	fi
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ "$node" ]; then
 			if ! dlurl=$(apk_mirror_search "$resp" "$dpi" "${arch}" "APK"); then
@@ -340,15 +354,14 @@ dl_apkmirror() {
 	fi
 }
 get_apkmirror_vers() {
-	local vers apkm_resp
-	apkm_resp=$(req "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" -)
-	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"$apkm_resp" | awk '{$1=$1}1')
+	local vers
+	vers=$(sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' <<<"${__APKMIRROR_UPLOADS__}" | awk '{$1=$1}1')
 	if [ "$__AAV__" = false ]; then
 		local IFS=$'\n'
 		vers=$(grep -iv "\(beta\|alpha\)" <<<"$vers")
 		local v r_vers=()
 		for v in $vers; do
-			grep -iq "${v} \(beta\|alpha\)" <<<"$apkm_resp" || r_vers+=("$v")
+			grep -iq "${v} \(beta\|alpha\)" <<<"${__APKMIRROR_UPLOADS__}" || r_vers+=("$v")
 		done
 		echo "${r_vers[*]}"
 	else
@@ -359,6 +372,7 @@ get_apkmirror_pkg_name() { sed -n 's;.*id=\(.*\)" class="accent_color.*;\1;p' <<
 get_apkmirror_resp() {
 	__APKMIRROR_RESP__=$(req "${1}" -)
 	__APKMIRROR_CAT__="${1##*/}"
+	__APKMIRROR_UPLOADS__=$(req "https://www.apkmirror.com/uploads/?appcategory=${__APKMIRROR_CAT__}" -)
 }
 
 # -------------------- uptodown --------------------
