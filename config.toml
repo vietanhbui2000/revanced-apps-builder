@@ -26,7 +26,7 @@ version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide music video ads' 'Hide upgrade button' 'Remove background playback restrictions' 'Spoof video streams'"
+included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback' 'GmsCore support' \"Hide 'Get Music Premium'\" 'Hide music video ads' 'Hide upgrade button' 'Remove background playback restrictions' 'Spoof video streams'"
 excluded-patches = "'Hide category bar' 'Permanent repeat'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
