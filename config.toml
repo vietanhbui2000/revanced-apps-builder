@@ -15,71 +15,9 @@ version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-included-patches = """\
-  'Bypass image region restrictions' \
-  'Bypass URL redirects' \
-  'Change form factor' \
-  'Change header' \
-  'Change start page' \
-  'Check watch history domain name resolution' \
-  'Disable auto captions' \
-  'Disable double tap actions' \
-  'Disable fullscreen ambient mode' \
-  'Disable haptic feedback' \
-  'Disable HDR video' \
-  'Disable player popup panels' \
-  'Disable resuming Shorts on startup' \
-  'Disable rolling number animations' \
-  'Disable sign in to TV popup' \
-  'Force original audio' \
-  'GmsCore support' \
-  'Hide ads' \
-  'Hide end screen cards' \
-  'Hide end screen suggested video' \
-  'Hide info cards' \
-  'Hide layout components' \
-  'Hide player flyout menu items' \
-  'Hide player overlay buttons' \
-  'Hide related video overlay' \
-  'Hide Shorts components' \
-  'Hide timestamp' \
-  'Hide video action buttons' \
-  'Miniplayer' \
-  'Navigation buttons' \
-  'Open links externally' \
-  'Remove background playback restrictions' \
-  'Remove tracking query parameter' \
-  'Remove viewer discretion dialog' \
-  'Return YouTube Dislike' \
-  'Seekbar' \
-  'SponsorBlock' \
-  'Spoof app version' \
-  'Spoof device dimensions' \
-  'Spoof video streams' \
-  'Video ads' \
-  'Video quality' \
-  """
-excluded-patches = """\
-  'Alternative thumbnails' \
-  'Always repeat' \
-  'Announcements' \
-  'Copy video URL' \
-  'Custom branding' \
-  'Custom player overlay opacity' \
-  'Downloads' \
-  'Enable debugging' \
-  'Exit fullscreen mode' \
-  'Open Shorts in regular player' \
-  'Open videos fullscreen' \
-  'Playback speed' \
-  'Shorts autoplay' \
-  'Swipe controls' \
-  'Theme' \
-  'Wide search bar' \
-  """
-patcher-args = """\
-  -OgmsCoreVendorGroupId=app.revanced \
-  """
+included-patches = "'Bypass image region restrictions' 'Bypass URL redirects' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Disable auto captions' 'Disable double tap actions' 'Disable fullscreen ambient mode' 'Disable haptic feedback' 'Disable HDR video' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide Shorts components' 'Hide timestamp' 'Hide video action buttons' 'Miniplayer' 'Navigation buttons' 'Open links externally' 'Remove background playback restrictions' 'Remove tracking query parameter' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Seekbar' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Video ads' 'Video quality'"
+excluded-patches = "'Alternative thumbnails' 'Always repeat' 'Announcements' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Exit fullscreen mode' 'Open Shorts in regular player' 'Open videos fullscreen' 'Playback speed' 'Shorts autoplay' 'Swipe controls' 'Theme' 'Wide search bar'"
+patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [YouTube-Music]
 enabled = true
@@ -88,63 +26,9 @@ version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-included-patches = """\
-  'Bypass certificate checks' \
-  'Enable exclusive audio playback' \
-  'GmsCore support' \
-  'Hide 'Get Music Premium'' \
-  'Hide music video ads' \
-  'Hide upgrade button' \
-  'Remove background playback restrictions' \
-  'Spoof video streams' \
-  """
-excluded-patches = """\
-  'Hide category bar' \
-  'Permanent repeat' \
-  """
-patcher-args = """\
-  -OgmsCoreVendorGroupId=app.revanced \
-  """
-
-[TikTok]
-enabled = true
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok/"
-uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
-included-patches = """\
-  'Feed filter' \
-  'Remember clear display' \
-  'Downloads' \
-  'Show seekbar' \
-  'Playback speed' \
-  'Disable login requirement' \
-  'Fix Google login' \
-  'Settings' \
-  'SIM spoof' \
-  """
-exclusive-patches = true
-
-[TikTok-Musically]
-enabled = false
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-included-patches = """\
-  'Feed filter' \
-  'Remember clear display' \
-  'Downloads' \
-  'Show seekbar' \
-  'Playback speed' \
-  'Disable login requirement' \
-  'Fix Google login' \
-  'Settings' \
-  'SIM spoof' \
-  """
-exclusive-patches = true
+included-patches = '''Bypass certificate checks' 'Enable exclusive audio playback' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide music video ads' 'Hide upgrade button' 'Remove background playback restrictions' 'Spoof video streams'''
+excluded-patches = '''Hide category bar' 'Permanent repeat'''
+patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [Twitch]
 enabled = true
@@ -154,14 +38,7 @@ arch = "all"
 apkmirror-dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch/"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-included-patches = """\
-  'Block audio ads' \
-  'Block embedded ads' \
-  'Block video ads' \
-  'Show deleted messages' \
-  'Auto claim channel points' \
-  'Settings' \
-  """
+included-patches = "'Block audio ads' 'Block embedded ads' 'Block video ads' 'Show deleted messages' 'Auto claim channel points' 'Settings'"
 exclusive-patches = true
 
 [Twitter]
