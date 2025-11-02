@@ -1,6 +1,6 @@
 Google-Photos (arm64-v8a): 7.52.0.825653635  
 Google-Photos (arm-v7a): 7.52.0.825653635  
-Proton-Mail: 4.15.0  
+TikTok: 36.5.4  
 Twitch: 25.3.0  
 YouTube: 20.14.43  
 YouTube-Music (arm64-v8a): 8.10.52  
