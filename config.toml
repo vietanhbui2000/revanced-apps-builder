@@ -32,6 +32,26 @@ included-patches = "'Bypass certificate checks' 'Enable exclusive audio playback
 excluded-patches = "'Check watch history domain name resolution' 'Custom branding' 'Enable debugging' 'Permanent repeat' 'Theme'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
+[TikTok]
+enabled = true
+build-mode = "apk"
+version = "auto"
+arch = "all"
+apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok/"
+uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
+included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'Sanitize sharing links' 'SIM spoof'"
+exclusive-patches = true
+
+[TikTok-Musically]
+enabled = false
+build-mode = "apk"
+version = "auto"
+arch = "all"
+apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+included-patches = "'Feed filter' 'Remember clear display' 'Downloads' 'Show seekbar' 'Playback speed' 'Disable login requirement' 'Fix Google login' 'Settings' 'Sanitize sharing links' 'SIM spoof'"
+exclusive-patches = true
+
 [Twitch]
 enabled = true
 build-mode = "apk"
@@ -58,14 +78,6 @@ version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-
-[Proton-Mail]
-enabled = true
-build-mode = "apk"
-version = "auto"
-arch = "all"
-apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonmail-encrypted-email/"
-uptodown-dlurl = "https://protonmail.en.uptodown.com/android"
 
 [Google-Photos]
 enabled = true
