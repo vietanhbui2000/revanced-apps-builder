@@ -37,23 +37,51 @@ jobs:
 
       - name: Get next version code
         id: next_ver_code
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
-          if [ -z "$TAG" ]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
+          VERSION_CODE=$(date +'%Y%m%d')
+          echo "NEXT_VER_CODE=$VERSION_CODE" >> $GITHUB_OUTPUT
 
       - name: Clean up older releases and tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Cleaning up all existing releases..."
-          gh release list --limit 1000 --json tagName -q '.[].tagName' | xargs -r -I {} gh release delete {} --yes || :
+          CURRENT_TAG="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
+          echo "Cleaning up older releases (keeping 3 most recent unique dates)..."
           
-          echo "Cleaning up all existing tags..."
-          git tag -l | xargs -r -I {} git push --delete origin {} || :
-          git tag -l | xargs -r -I {} git tag -d {} || :
+          # Delete any existing release with today's tag (same-day rebuild)
+          if gh release view "$CURRENT_TAG" &>/dev/null; then
+            echo "Found existing release for today ($CURRENT_TAG), deleting it to replace with new build..."
+            gh release delete "$CURRENT_TAG" --yes || :
+          fi
+          
+          # Get all unique release dates sorted (dates in yyyymmdd format sort correctly)
+          ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName' | sort -u -r)
+          UNIQUE_DATES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
+          
+          if [ "$UNIQUE_DATES" -gt 3 ]; then
+            # Keep the 3 most recent unique dates, delete the rest
+            KEEP_DATES=$(echo "$ALL_TAGS" | head -n 3)
+            DELETE_DATES=$(echo "$ALL_TAGS" | tail -n +4)
+            
+            echo "Keeping releases with dates: $KEEP_DATES"
+            echo "$DELETE_DATES" | while read -r tag; do
+              [ -n "$tag" ] && echo "Deleting release: $tag" && gh release delete "$tag" --yes || :
+            done
+          else
+            echo "Only $UNIQUE_DATES unique date(s) found, nothing to clean up"
+          fi
+          
+          echo "Cleaning up orphaned tags..."
+          # Delete tags that don't have releases (in case of orphaned tags)
+          RELEASE_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
+          git fetch --tags
+          git tag -l | while read -r tag; do
+            if ! echo "$RELEASE_TAGS" | grep -q "^${tag}$"; then
+              echo "Deleting orphaned tag: $tag"
+              git push --delete origin "$tag" || :
+              git tag -d "$tag" || :
+            fi
+          done
 
       - name: Build modules/APKs
         run: if [ -f "config.json" ]; then ./build.sh config.json; else ./build.sh config.toml; fi
