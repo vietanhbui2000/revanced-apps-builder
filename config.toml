@@ -16,8 +16,8 @@ arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-included-patches = "'Bypass image region restrictions' 'Bypass URL redirects' 'Change form factor' 'Change header' 'Change start page' 'Disable auto captions' 'Disable double tap actions' 'Disable fullscreen ambient mode' 'Disable haptic feedback' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide Shorts components' 'Hide timestamp' 'Hide video action buttons' 'Miniplayer' 'Navigation buttons' 'Open links externally' 'Open Shorts in regular player' 'Open videos fullscreen' 'Playback speed' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Video ads' 'Video quality'"
-excluded-patches = "'Alternative thumbnails' 'Announcements' 'Check watch history domain name resolution' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Loop video' 'Swipe controls' 'Theme' 'Wide search bar'"
+included-patches = "'Bypass image region restrictions' 'Bypass URL redirects' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Disable auto captions' 'Disable double tap actions' 'Disable fullscreen ambient mode' 'Disable haptic feedback' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide Shorts components' 'Hide timestamp' 'Hide video action buttons' 'Miniplayer' 'Navigation buttons' 'Open links externally' 'Open Shorts in regular player' 'Open videos fullscreen' 'Playback speed' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Video ads' 'Video quality'"
+excluded-patches = "'Alternative thumbnails' 'Announcements' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Loop video' 'Swipe controls' 'Theme' 'Wide search bar'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [YouTube-Music]
@@ -28,8 +28,8 @@ arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-included-patches = "'Bypass certificate checks' 'Change miniplayer color' 'Enable exclusive audio playback' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium' label' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Navigation bar' 'Remove background playback restrictions' 'Sanitize sharing links' 'Spoof video streams'"
-excluded-patches = "'Check watch history domain name resolution' 'Custom branding' 'Enable debugging' 'Permanent repeat' 'Theme'"
+included-patches = "'Bypass certificate checks' 'Change miniplayer color' 'Check watch history domain name resolution' 'Enable exclusive audio playback' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Navigation bar' 'Remove background playback restrictions' 'Sanitize sharing links' 'Spoof video streams'"
+excluded-patches = "'Custom branding' 'Enable debugging' 'Permanent repeat' 'Theme'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [TikTok]
@@ -87,3 +87,12 @@ arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos/"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.photos"
+
+[ProtonVPN]
+enabled = true
+build-mode = "apk"
+version = "auto"
+arch = "all"
+dpi = "120-640dpi"
+apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn/"
+uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
