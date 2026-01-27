@@ -1,4 +1,4 @@
-name: Build Modules
+name: Build Modules/APKs
 on:
   workflow_call:
     inputs:
@@ -38,7 +38,7 @@ jobs:
       - name: Get next version code
         id: next_ver_code
         run: |
-          VERSION_CODE=$(date +'%Y%m%d')
+          VERSION_CODE=$(date +'%Y%m%d%H%M%S')
           echo "NEXT_VER_CODE=$VERSION_CODE" >> $GITHUB_OUTPUT
 
       - name: Clean up older releases and tags
@@ -46,28 +46,22 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CURRENT_TAG="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
-          echo "Cleaning up older releases (keeping 10 most recent unique dates)..."
-          
-          if gh release view "$CURRENT_TAG" &>/dev/null; then
-            echo "Found existing release for today ($CURRENT_TAG), deleting it to replace with new build..."
-            gh release delete "$CURRENT_TAG" --yes || :
-          fi
-          
-          ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName' | sort -u -r)
-          UNIQUE_DATES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
-          
-          if [ "$UNIQUE_DATES" -gt 10 ]; then
-            KEEP_DATES=$(echo "$ALL_TAGS" | head -n 10)
-            DELETE_DATES=$(echo "$ALL_TAGS" | tail -n +11)
-            
-            echo "Keeping releases with dates: $KEEP_DATES"
-            echo "$DELETE_DATES" | while read -r tag; do
-              [ -n "$tag" ] && echo "Deleting release: $tag" && gh release delete "$tag" --yes || :
+          echo "Cleaning up older releases (keeping 10 most recent releases)..."
+
+          ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
+          TOTAL_RELEASES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
+
+          if [ "$TOTAL_RELEASES" -gt 10 ]; then
+            DELETE_TAGS=$(echo "$ALL_TAGS" | tail -n +11)
+            echo "$DELETE_TAGS" | while read -r tag; do
+              [ -n "$tag" ] || continue
+              echo "Deleting old release: $tag"
+              gh release delete "$tag" --yes || :
             done
           else
-            echo "Only $UNIQUE_DATES unique date(s) found, nothing to clean up"
+            echo "Only $TOTAL_RELEASES release(s) found, nothing to clean up"
           fi
-          
+
           echo "Cleaning up orphaned tags..."
           RELEASE_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
           git fetch --tags
@@ -95,7 +89,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Upload modules to release
+      - name: Upload modules/APKs to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
