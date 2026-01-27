@@ -4,7 +4,7 @@ cli-version = "latest"
 patches-version = "latest"
 integrations-version = "latest"
 
-[YouTube]
+[YouTube_ReVanced]
 enabled = true
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
@@ -19,7 +19,7 @@ included-patches = "'Bypass image region restrictions' 'Bypass URL redirects' 'C
 excluded-patches = "'Alternative thumbnails' 'Announcements' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Loop video' 'Swipe controls' 'Theme' 'Wide search bar'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
-[YouTube-Music]
+[YouTube-Music_ReVanced]
 enabled = true
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
@@ -114,7 +114,7 @@ dpi = "120-640dpi"
 apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn/"
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 
-[YouTube]
+[YouTube_Morphe]
 enabled = true
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
@@ -128,7 +128,7 @@ included-patches = "'Auto captions' 'Bypass URL redirects' 'Bypass image region 
 excluded-patches = "'Alternative thumbnails' 'Change package name' 'Copy video URL' 'Custom branding' 'Custom player overlay opacity' 'Downloads' 'Enable debugging' 'Loop video' 'Swipe controls' 'Theme'"
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
-[YouTube-Music]
+[YouTube-Music_Morphe]
 enabled = true
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
