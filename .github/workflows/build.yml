@@ -46,7 +46,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CURRENT_TAG="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
-          echo "Cleaning up older releases (keeping 3 most recent unique dates)..."
+          echo "Cleaning up older releases (keeping 10 most recent unique dates)..."
           
           if gh release view "$CURRENT_TAG" &>/dev/null; then
             echo "Found existing release for today ($CURRENT_TAG), deleting it to replace with new build..."
@@ -56,9 +56,9 @@ jobs:
           ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName' | sort -u -r)
           UNIQUE_DATES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
           
-          if [ "$UNIQUE_DATES" -gt 3 ]; then
-            KEEP_DATES=$(echo "$ALL_TAGS" | head -n 3)
-            DELETE_DATES=$(echo "$ALL_TAGS" | tail -n +4)
+          if [ "$UNIQUE_DATES" -gt 10 ]; then
+            KEEP_DATES=$(echo "$ALL_TAGS" | head -n 10)
+            DELETE_DATES=$(echo "$ALL_TAGS" | tail -n +11)
             
             echo "Keeping releases with dates: $KEEP_DATES"
             echo "$DELETE_DATES" | while read -r tag; do
