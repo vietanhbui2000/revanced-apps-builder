@@ -5,7 +5,7 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_ReVanced]
-enabled = true
+enabled = false
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
@@ -20,7 +20,7 @@ excluded-patches = "'Alternative thumbnails' 'Announcements' 'Copy video URL' 'C
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [YouTube-Music_ReVanced]
-enabled = true
+enabled = false
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
