@@ -5,12 +5,13 @@ ReVanced Apps Builder — checks daily and builds apps automatically when an upd
 ## Workflow status
 
 [![CI](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/ci.yml)
+[![Build Modules/APKs](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml/badge.svg)](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml)
 
 ## Download
 
 Get the [latest release](https://github.com/vietanhbui2000/revanced-apps-builder/releases).
 
-# Usage
+## Usage
 
 See the [original repository](https://github.com/j-hc/revanced-magisk-module) for [documentation](https://github.com/j-hc/revanced-magisk-module/blob/main/README.md).
 
