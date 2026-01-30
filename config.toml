@@ -6,7 +6,7 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_ReVanced]
-enabled = false
+enabled = true
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
@@ -21,7 +21,7 @@ excluded-patches = "'Alternative thumbnails' 'Announcements' 'Copy video URL' 'C
 patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [YouTube-Music_ReVanced]
-enabled = false
+enabled = true
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
@@ -117,6 +117,7 @@ uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 
 [YouTube_Morphe]
 enabled = true
+rv-brand = "Morphe"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 build-mode = "apk"
@@ -131,6 +132,7 @@ patcher-args = "-OgmsCoreVendorGroupId=app.revanced"
 
 [YouTube-Music_Morphe]
 enabled = true
+rv-brand = "Morphe"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 build-mode = "apk"
