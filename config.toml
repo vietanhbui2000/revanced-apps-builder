@@ -1,4 +1,5 @@
 parallel-jobs = 1
+dpi = "nodpi anydpi 120-640dpi"
 
 cli-version = "latest"
 patches-version = "latest"
