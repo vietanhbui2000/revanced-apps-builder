@@ -5,7 +5,7 @@ ReVanced Apps Builder — checks daily and builds apps automatically when an upd
 ## Workflow status
 
 [![CI](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/ci.yml)
-[![Build Modules/APKs](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml/badge.svg)](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml)
+[![Build APKs/Modules](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml/badge.svg)](https://github.com/vietanhbui2000/revanced-apps-builder/actions/workflows/build.yml)
 
 ## Download
 

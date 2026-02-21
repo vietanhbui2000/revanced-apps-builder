@@ -1,4 +1,4 @@
-name: Build Modules/APKs
+name: Build APKs/Modules
 on:
   workflow_call:
     inputs:
@@ -73,7 +73,7 @@ jobs:
             fi
           done
 
-      - name: Build modules/APKs
+      - name: Build APKs/modules
         run: if [ -f "config.json" ]; then ./build.sh config.json; else ./build.sh config.toml; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -89,7 +89,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Upload modules/APKs to release
+      - name: Upload APKs/modules to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
