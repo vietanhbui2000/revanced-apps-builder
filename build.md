@@ -21,7 +21,3 @@ Patches: MorpheApp/patches-1.14.0.mpp
 CLI: revanced/revanced-cli-5.0.1-all.jar  
 Patches: revanced/patches-5.50.2.rvp  
 [Changelog](https://github.com/revanced/revanced-patches/releases/tag/v5.50.2)  
-
-Skipped:  
-Patches: revanced/patches-5.50.2.rvp    
-Patches: MorpheApp/patches-1.14.0.mpp    
