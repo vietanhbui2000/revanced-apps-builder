@@ -641,7 +641,7 @@ build_rv() {
 		fi
 		rm "$stock_apk_to_patch"
 		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}_v${version_f}-${arch_f}_${rv_brand_f}.apk"
+			local apk_output="${BUILD_DIR}/${app_name_l}_${rv_brand_f}_v${version_f}-${arch_f}.apk"
 			mv -f "$patched_apk" "$apk_output"
 			pr "Built ${table} (non-root): '${apk_output}'"
 			continue
@@ -662,7 +662,7 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}-${rv_brand_f}-module-v${version_f}-${arch_f}.zip"
+		local module_output="${app_name_l}_${rv_brand_f}_v${version_f}-${arch_f}-module.zip"
 		pr "Packing module ${table}"
 		cp -f "$patched_apk" "${base_template}/base.apk"
 		if [ "${args[include_stock]}" = true ]; then cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"; fi
