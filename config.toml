@@ -6,7 +6,7 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_RV]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -20,7 +20,7 @@ included-patches = "'Alternative thumbnails' 'Announcements' 'Bypass URL redirec
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_RV]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "both"
