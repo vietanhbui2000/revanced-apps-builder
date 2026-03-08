@@ -1,4 +1,5 @@
 parallel-jobs = 1
+remove-rv-integrations-checks = false
 dpi = "nodpi anydpi 120-640dpi"
 
 cli-version = "latest"
@@ -6,7 +7,7 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_RV]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -20,7 +21,7 @@ included-patches = "'Alternative thumbnails' 'Announcements' 'Bypass URL redirec
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_RV]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "both"
