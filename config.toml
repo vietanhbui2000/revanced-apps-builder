@@ -34,7 +34,7 @@ included-patches = "'Change miniplayer color' 'Check watch history domain name r
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [TikTok]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -73,7 +73,7 @@ included-patches = "'Auto claim channel points' 'Block audio ads' 'Block embedde
 excluded-patches = "'Debug mode'"
 
 [Google-Photos]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "both"
