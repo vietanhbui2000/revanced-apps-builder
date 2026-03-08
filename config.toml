@@ -6,7 +6,7 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_RV]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -19,7 +19,7 @@ included-patches = "'Alternative thumbnails' 'Announcements' 'Bypass URL redirec
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_RV]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "both"
@@ -32,7 +32,7 @@ included-patches = "'Change miniplayer color' 'Check watch history domain name r
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [TikTok]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -58,7 +58,7 @@ included-patches = "'Disable login requirement' 'Downloads' 'Feed filter' 'Fix G
 excluded-patches = "'SIM spoof'"
 
 [Twitch]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "25.3.0"
 arch = "all"
@@ -84,7 +84,7 @@ included-patches = "'GmsCore support' 'Spoof features'"
 excluded-patches = "'Enable DCIM folders backup control'"
 
 [Proton-Mail]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -96,7 +96,7 @@ integrations-source = "revanced/revanced-integrations"
 included-patches = "'Remove 'Sent from' signature' 'Remove free accounts limit'"
 
 [Proton-VPN]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -117,7 +117,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
-included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass URL redirects' 'Bypass image region restrictions' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable double tap actions' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open links externally' 'Open videos fullscreen' 'Playback speed' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Swipe controls' 'Video ads' 'Video quality'"
+included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass URL redirects' 'Bypass image region restrictions' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable double tap actions' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music actions' 'Playback speed' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Swipe controls' 'Video ads' 'Video quality'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_MP]
@@ -130,5 +130,5 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
-included-patches = "'Bypass certificate checks' 'Change miniplayer color' 'Check watch history domain name resolution' 'Disable DRC audio' 'Enable exclusive audio playback' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links'"
+included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Enable exclusive audio playback' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
