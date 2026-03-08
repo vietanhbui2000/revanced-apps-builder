@@ -6,12 +6,13 @@ patches-version = "latest"
 integrations-version = "latest"
 
 [YouTube_RV]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
@@ -19,12 +20,13 @@ included-patches = "'Alternative thumbnails' 'Announcements' 'Bypass URL redirec
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_RV]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 cli-source = "revanced/revanced-cli"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
@@ -32,7 +34,7 @@ included-patches = "'Change miniplayer color' 'Check watch history domain name r
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [TikTok]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -114,6 +116,7 @@ version = "auto"
 arch = "all"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
@@ -127,6 +130,7 @@ version = "auto"
 arch = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
