@@ -159,7 +159,7 @@ included-patches = "'Disable login requirement' 'Downloads' 'Feed filter' 'Fix G
 excluded-patches = "'Enable Open Debug' 'Playback speed' 'Settings'"
 
 [Twitch_MP]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -171,7 +171,7 @@ included-patches = "'Auto claim channel points' 'Block audio ads' 'Block embedde
 excluded-patches = "'Debug mode'"
 
 [Google-Photos_MP]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "both"
@@ -184,7 +184,7 @@ included-patches = "'GmsCore support' 'Spoof features'"
 excluded-patches = "'Enable DCIM folders backup control'"
 
 [Google-Recorder_MP]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "arm64-v8a"
