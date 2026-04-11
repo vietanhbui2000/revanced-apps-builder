@@ -100,7 +100,7 @@ jobs:
           file_glob: true
           overwrite: true
 
-      - name: Update changelog and update json
+      - name: Update modules changelog and update json
         id: update_config
         run: |
           git checkout -f update || git switch --discard-changes --orphan update
