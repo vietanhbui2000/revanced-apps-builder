@@ -14,7 +14,8 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-java@v5
+      - name: Setup
+        uses: actions/setup-java@v5
         with:
           distribution: "zulu"
           java-version: "21"
@@ -41,12 +42,12 @@ jobs:
           VERSION_CODE=$(date +'%Y%m%d%H%M%S')
           echo "NEXT_VER_CODE=$VERSION_CODE" >> $GITHUB_OUTPUT
 
-      - name: Clean up older releases and tags
+      - name: Clean up older Releases and Tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CURRENT_TAG="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
-          echo "Cleaning up older releases (keeping 10 most recent releases)..."
+          echo "Cleaning up older Releases (keeping 10 most recent Releases)..."
 
           ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
           TOTAL_RELEASES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
@@ -62,7 +63,7 @@ jobs:
             echo "Only $TOTAL_RELEASES release(s) found, nothing to clean up"
           fi
 
-          echo "Cleaning up orphaned tags..."
+          echo "Cleaning up orphaned Tags..."
           RELEASE_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
           git fetch --tags
           git tag -l | while read -r tag; do
@@ -73,7 +74,7 @@ jobs:
             fi
           done
 
-      - name: Build APKs/modules
+      - name: Build APKs/Modules
         run: if [ -f "config.json" ]; then ./build.sh config.json; else ./build.sh config.toml; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -89,7 +90,7 @@ jobs:
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
 
-      - name: Upload APKs/modules to Release
+      - name: Upload APKs/Modules to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
@@ -102,7 +103,7 @@ jobs:
             gh release create "$TAG" ./build/* --title "Release" --notes "$BODY"
           fi
 
-      - name: Update changelog and update json
+      - name: Update Modules changelog and update json
         id: update_config
         run: |
           git checkout -f update || git switch --discard-changes --orphan update
@@ -131,7 +132,7 @@ jobs:
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
 
-      - name: Commit module json changes
+      - name: Commit Modules update json changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
