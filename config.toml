@@ -2,7 +2,7 @@ parallel-jobs = 1
 remove-rv-integrations-checks = false
 dpi = "nodpi anydpi 120-640dpi"
 
-[YouTube_RV]
+[YouTube]
 enabled = false
 build-mode = "apk"
 version = "auto"
@@ -16,7 +16,7 @@ integrations-source = "revanced/revanced-integrations"
 included-patches = "'Alternative thumbnails' 'Announcements' 'Bypass URL redirects' 'Bypass image region restrictions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable auto captions' 'Disable double tap actions' 'Disable fullscreen ambient mode' 'Disable haptic feedback' 'Disable player popup panels' 'Disable resuming Shorts on startup' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu items' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Miniplayer' 'Navigation buttons' 'Open Shorts in regular player' 'Open links externally' 'Open videos fullscreen' 'Pause on audio interrupt' 'Playback speed' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Swipe controls' 'Video ads' 'Video quality' 'Wide search bar'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
-[YouTube-Music_RV]
+[YouTube-Music]
 enabled = false
 build-mode = "apk"
 version = "auto"
@@ -117,7 +117,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.y
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
-included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass URL redirects' 'Bypass image region restrictions' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable Shorts resuming on startup' 'Disable double tap actions' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music actions' 'Playback speed' 'Reload video' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Swipe controls' 'Video ads' 'Video quality'"
+included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass URL redirects' 'Bypass image region restrictions' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable Shorts resuming on startup' 'Disable double tap actions' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music actions' 'Play all' 'Playback speed' 'Reload video' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Swipe controls' 'Video ads' 'Video quality'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [YouTube-Music_MP]
@@ -131,7 +131,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
 rv-brand = "Morphe"
-included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Miniplayer previous and next buttons' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links'"
+included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Force original audio' 'GmsCore support' 'Hide 'Get Music Premium'' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Miniplayer previous and next buttons' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links' 'Spoof video streams'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [TikTok_MP]
