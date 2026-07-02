@@ -47,13 +47,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CURRENT_TAG="${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}"
-          echo "Cleaning up older Releases (keeping 10 most recent Releases)..."
+          echo "Cleaning up older releases (keeping 9 most recent ones)..."
 
           ALL_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
           TOTAL_RELEASES=$(echo "$ALL_TAGS" | wc -l | tr -d ' ')
 
-          if [ "$TOTAL_RELEASES" -gt 10 ]; then
-            DELETE_TAGS=$(echo "$ALL_TAGS" | tail -n +11)
+          if [ "$TOTAL_RELEASES" -gt 9 ]; then
+            DELETE_TAGS=$(echo "$ALL_TAGS" | tail -n +10)
             echo "$DELETE_TAGS" | while read -r tag; do
               [ -n "$tag" ] || continue
               echo "Deleting old release: $tag"
@@ -63,7 +63,7 @@ jobs:
             echo "Only $TOTAL_RELEASES release(s) found, nothing to clean up"
           fi
 
-          echo "Cleaning up orphaned Tags..."
+          echo "Cleaning up orphaned tags..."
           RELEASE_TAGS=$(gh release list --limit 1000 --json tagName -q '.[].tagName')
           git fetch --tags
           git tag -l | while read -r tag; do
@@ -93,14 +93,14 @@ jobs:
       - name: Upload APKs/Modules to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          BODY: ${{ steps.get_output.outputs.BUILD_LOG }}
+          TITLE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          NOTES: ${{ steps.get_output.outputs.BUILD_LOG }}
         run: |
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release edit "$TAG" --title "Release" --notes "$BODY"
-            gh release upload "$TAG" ./build/* --clobber
+          if gh release view "$TITLE" >/dev/null 2>&1; then
+            gh release edit "$TITLE" --title "$TITLE" --notes "$NOTES"
+            gh release upload "$TITLE" ./build/* --clobber
           else
-            gh release create "$TAG" ./build/* --title "Release" --notes "$BODY"
+            gh release create "$TITLE" ./build/* --title "$TITLE" --notes "$NOTES"
           fi
 
       - name: Update Modules changelog and update json
