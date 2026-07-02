@@ -768,7 +768,7 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}_v${version_f}-${arch_f}-module_${rv_brand_f}.zip"
+		local module_output="${app_name_l}_v${version_f}-${arch_f}_module_${rv_brand_f}.zip"
 		pr "Packing module ${table}"
 		cp -f "$patched_apk" "${base_template}/base.apk"
 
