@@ -13,6 +13,8 @@ jobs:
   run:
     permissions: write-all
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Ho_Chi_Minh
     steps:
       - name: Setup
         uses: actions/setup-java@v5
