@@ -13,6 +13,8 @@ jobs:
   check:
     permissions: write-all
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Ho_Chi_Minh
     steps:
       - name: Checkout
         uses: actions/checkout@v6
