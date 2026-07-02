@@ -12,9 +12,9 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
-rv-brand = "Morphe"
-included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass URL redirects' 'Bypass image region restrictions' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video URL' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable Shorts resuming on startup' 'Disable double tap actions' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Media notification controls' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open channel of live avatar' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music buttons' 'Play all' 'Playback speed' 'Reload video' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Save to watch later' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Swipe controls' 'Video ads' 'Video quality'"
+included-patches = "'Alternative thumbnails' 'Ambient mode' 'Bypass image region restrictions' 'Bypass link redirects' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video link' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable Shorts resuming on startup' 'Disable double tap actions' 'Disable fullscreen gestures' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Media notification controls' 'Miniplayer' 'Navigation bar' 'Open Shorts in regular player' 'Open channel of live avatar' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music buttons' 'Play all' 'Playback speed' 'Reload video' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Save to watch later' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Swipe controls' 'Video ads' 'Video quality'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
+rv-brand = "Morphe"
 
 [YouTube-Music]
 enabled = true
@@ -26,9 +26,9 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
-rv-brand = "Morphe"
-included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Miniplayer previous and next buttons' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links' 'Spoof video streams' 'Track crossfade'"
+included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Enable swipe to dismiss miniplayer' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide buttons' 'Hide category bar' 'Hide music video ads' 'Miniplayer previous and next buttons' 'Navigation bar' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links' 'Spoof video streams' 'Track crossfade'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
+rv-brand = "Morphe"
 
 [TikTok]
 enabled = true
@@ -39,7 +39,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok/"
 uptodown-dlurl = "https://tik-tok.en.uptodown.com/android"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "icysymmetra/tiktok-patches-for-morphe"
-included-patches = "'Disable login requirement' 'Downloads' 'Enable Open Debug' 'Feed filter' 'Fix Google login' 'Playback speed' 'Remember clear display' 'SIM spoof' 'Sanitize sharing links' 'Settings' 'Show seekbar'"
+included-patches = "'Auto Translate comments' 'Copy comments without username' 'Custom offline videos limit' 'Disable login requirement' 'Downloads' 'Enable Open Debug' 'Feed filter' 'Feed tab navigation' 'Fix Google login' 'Playback speed' 'Remember clear display' 'SIM spoof' 'Sanitize sharing links' 'Settings' 'Show seekbar'"
 
 [TikTok-Musically]
 enabled = true
@@ -50,7 +50,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-mu
 uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "icysymmetra/tiktok-patches-for-morphe"
-included-patches = "'Disable login requirement' 'Downloads' 'Enable Open Debug' 'Feed filter' 'Fix Google login' 'Playback speed' 'Remember clear display' 'SIM spoof' 'Sanitize sharing links' 'Settings' 'Show seekbar'"
+included-patches = "'Auto Translate comments' 'Copy comments without username' 'Custom offline videos limit' 'Disable login requirement' 'Downloads' 'Enable Open Debug' 'Feed filter' 'Feed tab navigation' 'Fix Google login' 'Playback speed' 'Remember clear display' 'SIM spoof' 'Sanitize sharing links' 'Settings' 'Show seekbar'"
 
 [Twitch]
 enabled = false
@@ -74,7 +74,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.photos"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "RookieEnough/De-ReVanced"
-included-patches = "'GmsCore support' 'Spoof features'"
+included-patches = "'Fix selected account persistence' 'GmsCore support' 'Spoof features'"
 excluded-patches = "'Enable DCIM folders backup control'"
 
 [Google-Recorder]
@@ -89,7 +89,7 @@ patches-source = "RookieEnough/De-ReVanced"
 included-patches = "'Remove device restrictions'"
 
 [Proton-VPN]
-enabled = false
+enabled = true
 build-mode = "apk"
 version = "auto"
 arch = "all"
@@ -97,4 +97,4 @@ apkmirror-dlurl = "https://apkmirror.com/apk/proton-technologies-ag/protonvpn-se
 uptodown-dlurl = "https://protonvpn.en.uptodown.com/android"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "hoo-dles/morphe-patches"
-included-patches = "'Remove server change delay' 'Unlock custom DNS' 'Unlock LAN connections' 'Unlock split tunneling'"
+included-patches = "'Remove delay' 'Unlock LAN connections' 'Unlock custom DNS' 'Unlock split tunneling'"
