@@ -1,5 +1,3 @@
-Proton-VPN: 5.17.72.0  
-TikTok-Musically: 43.8.3  
 YouTube: 20.51.39  
 YouTube-Music (arm64-v8a): 9.15.51  
 YouTube-Music (arm-v7a): 9.15.51  
@@ -10,11 +8,9 @@ Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach YouTube and
 [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
   
 CLI: MorpheApp/morphe-cli-1.9.1-all.jar  
+Patches: MorpheApp/patches-1.33.0.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.33.0)  
+
+Skipped:  
 Patches: hoo-dles/patches-1.38.1.mpp  
-[Changelog](https://github.com/hoo-dles/morphe-patches/releases/tag/v1.38.1)
-
-Patches: icysymmetra/patches-0.3.1.mpp  
-[Changelog](https://github.com/icysymmetra/tiktok-patches-for-morphe/releases/tag/v0.3.1)
-
-Patches: MorpheApp/patches-1.32.0.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.32.0)  
+Patches: icysymmetra/patches-0.3.1.mpp    
