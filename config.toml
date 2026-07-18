@@ -12,9 +12,9 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
+rv-brand = "Morphe"
 included-patches = "'Add to queue' 'Alternative thumbnails' 'Ambient mode' 'Bypass image region restrictions' 'Bypass link redirects' 'Captions' 'Change form factor' 'Change header' 'Change start page' 'Check watch history domain name resolution' 'Copy video link' 'Custom player overlay opacity' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable Shorts resuming on startup' 'Disable double tap actions' 'Disable fullscreen gestures' 'Disable haptic feedback' 'Disable layout updates' 'Disable player popup panels' 'Disable rolling number animations' 'Disable sign in to TV popup' 'Disable video codecs' 'Double tap to seek' 'Downloads' 'Exit fullscreen mode' 'Force original audio' 'GmsCore support' 'Hide Shorts components' 'Hide ads' 'Hide autoplay preview' 'Hide end screen cards' 'Hide end screen suggested video' 'Hide info cards' 'Hide layout components' 'Hide player flyout menu components' 'Hide player overlay buttons' 'Hide related video overlay' 'Hide related videos' 'Hide timestamp' 'Hide video action buttons' 'Loop video' 'Media notification controls' 'Miniplayer' 'Navigation bar' 'Network proxy' 'Open Shorts in regular player' 'Open channel of live avatar' 'Open links externally' 'Open system share sheet' 'Open videos fullscreen' 'Override YouTube Music buttons' 'Play all' 'Playback speed' 'Reload video' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Save to watch later' 'Seekbar' 'Shorts autoplay' 'SponsorBlock' 'Spoof app version' 'Spoof device dimensions' 'Spoof video streams' 'Swipe controls' 'Video quality' 'Voice over translation'"
 excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
-rv-brand = "Morphe"
 
 [YouTube-Music]
 enabled = true
@@ -26,9 +26,9 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 cli-source = "MorpheApp/morphe-cli"
 patches-source = "MorpheApp/morphe-patches"
-included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Downloads' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Enable swipe to dismiss miniplayer' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide buttons' 'Hide filter bar' 'Hide flyout menu components' 'Hide layout components' 'Hide music action buttons' 'Miniplayer previous and next buttons' 'Navigation bar' 'Network proxy' 'Permanent repeat' 'Remove background playback restrictions' 'Sanitize sharing links' 'Scrobbling' 'SponsorBlock' 'Spoof video streams' 'Track crossfade'"
-excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 rv-brand = "Morphe"
+included-patches = "'Bypass certificate checks' 'Change header' 'Change miniplayer color' 'Change start page' 'Check watch history domain name resolution' 'Disable DRC audio' 'Disable QUIC protocol' 'Disable dislike redirection' 'Downloads' 'Enable exclusive audio playback' 'Enable forced miniplayer' 'Enable swipe to dismiss miniplayer' 'Force original audio' 'GmsCore support' 'Hide ads' 'Hide buttons' 'Hide filter bar' 'Hide flyout menu components' 'Hide layout components' 'Hide music action buttons' 'Miniplayer previous and next buttons' 'Navigation bar' 'Network proxy' 'Remember repeat state' 'Remember shuffle state' 'Remove background playback restrictions' 'Sanitize sharing links' 'Scrobbling' 'SponsorBlock' 'Spoof app version' 'Spoof video streams' 'Track crossfade'"
+excluded-patches = "'Custom branding' 'Enable debugging' 'Theme'"
 
 [Twitch]
 enabled = false
