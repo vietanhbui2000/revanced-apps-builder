@@ -16,6 +16,11 @@ jobs:
     env:
       TZ: Asia/Ho_Chi_Minh
     steps:
+      - uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "21"
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
