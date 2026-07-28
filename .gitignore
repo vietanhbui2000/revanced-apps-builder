@@ -8,4 +8,4 @@ test*
 build.md
 cmpr
 *-temporary-files
-~private
+_private
