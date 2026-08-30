@@ -113,7 +113,7 @@ patches-source = "RookieEnough/De-ReVanced"
 included-patches = "'Remove device restrictions'"
 
 [TeraBox]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 arch = "all"
